@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>raihan lucuu </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        background: '#fff5f7',
+                        foreground: '#831843',
+                        primary: '#ec4899',
+                        secondary: '#fbcfe8',
+                        muted: '#fce7f3',
+                        accent: '#f472b6',
+                        destructive: '#fda4af',
+                        }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background min-h-screen font-sans">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-primary mb-4">i love u so much !!❤️</h1>
+            <p class="text-foreground text-xl">wlee lucu ga web ku, liat ada kamu di bawah inii</p>
+        </header>
+
+        <!-- Foto Utama -->
+        <div class="flex justify-center mb-12">
+            <div class="w-full max-w-md rounded-2xl overflow-hidden shadow-lg border-4 border-accent">
+                <img src="C:\web 1\img\kuncit.jpg"
+                src="https://placeholder-image-service.onrender.com/image/400x500?prompt=Couple%20hugging%20with%20hearts%20and%20pink%20background&id=couple-main-1&customer_id=cus_SzUlZ5NbrZmdmr" 
+                    alt="Pasangan sedang berpelukan dengan latar belakang pink dan hati-hati beterbangan" 
+                    class="w-full h-auto"
+                />
+            </div>
+        </div>
+
+        <!-- Pesan Cinta -->
+        <div class="bg-muted rounded-2xl p-8 mb-12 text-center">
+            <h2 class="text-2xl font-semibold text-foreground mb-4">itu raihan pacar akuu</h2>
+            <p class="text-lg text-foreground/80 mb-4">
+                orang terkeren, terganteng, terlucuu ini, semua nya dia bisa . maaci udah buat aku selalu happy 
+            </p>
+            <div class="animate-bounce mt-4">
+                <span class="text-3xl">❤️</span>
+            </div>
+        </div>
+
+         <!-- Galeri Foto -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <!-- Foto 1 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border-2 border-secondary">
+                <img 
+                    src="C:\web 1\img\belajar.jpg" 
+                    alt="pinternyaa" 
+                    class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                    <p class="text-foreground">aku potoin pacar akuu yang pinterr</p>
+                </div>
+            </div>
+
+            <!-- Foto 2 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border-2 border-secondary">
+                <img src="C:\web 1\img\pulang.jpg"
+                    src="https://placeholder-image-service.onrender.com/image/300x300?prompt=Romantic%20sunset%20with%20couple%20silhouette&id=galeri-2&customer_id=cus_SzUlZ5NbrZmdmr" 
+                    alt="ini pacar ku mau anter aku pulang baik banget kan dia" 
+                    class="w-full h-48 object-cover"
+                />
+                <div class="p-4">
+                    <p class="text-foreground">senengg bangett pulang sama eann gantengg</p>
+                </div>
+            </div>
+        </div>
+
+         <!-- Tombol Surprise -->
+        <div class="text-center mb-12">
+            <button onclick="showLoveMessage()" class="bg-primary hover:bg-accent text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-105">
+                klik ini ganteng 😛
+            </button>
+        </div>
+
+        <!-- Pesan Rahasia (Awalnya Tersembunyi) -->
+        <div id="secretMessage" class="hidden bg-accent rounded-2xl p-6 mb-12 text-center">
+            <h3 class="text-2xl font-semibold text-white mb-4">i love u today, tomorrow and forever 💖</h3>
+            <p class="text-white">
+                hayiii sayangg !!!!!! kamu kalo ada apa" cerita sama aku yaa aku suka bangett kalo kamu ceritaa. 
+                tetep sehat dan bahagiaa
+                terus ya no no sedihh
+                semoga tercapai wishlist" kamunyaa yaaa,
+                sama satu lagi
+                pls.. jangan bosen sama aku yang suka ngambek inii 🥺🥺
+                if u need me, im always hero for u i love u so much (malu xixi)
+
+                keren ga web akuu
+            </p>
+        </div>
+
+         <!-- Footer -->
+        <footer class="text-center mt-16">
+            <p class="text-foreground/60">Dibuat oleh syera yang imut ❤️ khusus untuk raihan </p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <span class="animate-pulse">💕</span>
+                <span class="animate-pulse">🌸</span>
+                <span class="animate-pulse">🐰</span>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function showLoveMessage() {
+            const message = document.getElementById('secretMessage');
+            message.classList.remove('hidden');
+            message.classList.add('animate-pulse');
+            
+            // Efek confetti sederhana
+            const colors = ['#ff69b4', '#ff1493', '#db2777', '#ec4899'];
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'fixed text-2xl';
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.top = '-50px';
+                    confetti.style.opacity = '0.8';
+                    confetti.textContent = ['❤️', '💖', '💕', '🌸', '🐰'][Math.floor(Math.random() * 5)];
+                    confetti.style.color = colors[Math.floor(Math.random() * colors.length)];
+                    document.body.appendChild(confetti);
+
+                    // Animasi jatuh
+                    const animation = confetti.animate([
+                        { transform: 'translateY(0)', opacity: 1 },
+                        { transform: `translateY(${window.innerHeight}px)`, opacity: 0 }
+                    ], {
+                        duration: 2000 + Math.random() * 3000,
+                        easing: 'cubic-bezier(0.1, 0.8, 0.1, 1)'
+                    });
+                    
+                    animation.onfinish = () => confetti.remove();
+                }, i * 100);
+            }
+        }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300;400;700&display=swap');
+        
+        body {
+            font-family: 'Comic Neue', cursive;
+        }
+        
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        .animate-bounce {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</body>
+</html>
